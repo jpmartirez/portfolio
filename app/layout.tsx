@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { BeamsBackground } from "@/components/ui/beams-background";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <BeamsBackground className="fixed inset-0 -z-10" />
+        <div className="relative z-10 min-h-screen flex flex-col">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
