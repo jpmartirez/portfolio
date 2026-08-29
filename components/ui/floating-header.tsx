@@ -11,15 +11,15 @@ export function FloatingHeader() {
 
 	const links = [
 		{
-			label: "Features",
+			label: "About Me",
 			href: "#",
 		},
 		{
-			label: "Pricing",
+			label: "Projects",
 			href: "#",
 		},
 		{
-			label: "About",
+			label: "Certifications",
 			href: "#",
 		},
 	];
@@ -36,7 +36,7 @@ export function FloatingHeader() {
 			<nav className="mx-auto flex items-center justify-between p-1.5">
 				<div className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 duration-100 hover:bg-white/10">
 					<Grid2x2PlusIcon className="size-5 text-white" />
-					<p className="text-base font-bold text-white">Asme</p>
+					<p className="text-base font-bold text-white">JP</p>
 				</div>
 				<div className="hidden items-center gap-1 lg:flex">
 					{links.map((link) => (
@@ -55,9 +55,9 @@ export function FloatingHeader() {
 				<div className="flex items-center gap-2">
 					<Button
 						size="sm"
-						className="bg-white text-neutral-900 hover:bg-neutral-100 font-semibold"
+						className="bg-white text-neutral-900 hover:bg-neutral-200 font-semibold cursor-pointer "
 					>
-						Login
+						Download CV
 					</Button>
 					<Sheet open={open} onOpenChange={setOpen}>
 						<Button
@@ -90,17 +90,6 @@ export function FloatingHeader() {
 									</a>
 								))}
 							</div>
-							<SheetFooter className="border-white/10">
-								<Button
-									variant="outline"
-									className="border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent"
-								>
-									Sign In
-								</Button>
-								<Button className="bg-white text-neutral-900 hover:bg-neutral-100 font-semibold">
-									Get Started
-								</Button>
-							</SheetFooter>
 						</SheetContent>
 					</Sheet>
 				</div>
