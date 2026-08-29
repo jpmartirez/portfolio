@@ -1,7 +1,9 @@
+import { HeroProfile } from "@/components/hero-profile";
+
 export default function Home() {
-	return (
-		<main>
-			<h1 className="text-white">This is me</h1>
-		</main>
-	);
+  return (
+    <main className="flex-1 flex flex-col items-center justify-center">
+      <HeroProfile />
+    </main>
+  );
 }
