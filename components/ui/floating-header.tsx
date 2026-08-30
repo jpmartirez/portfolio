@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Grid2x2PlusIcon, MenuIcon } from "lucide-react";
-import { Sheet, SheetContent, SheetFooter } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -12,15 +13,15 @@ export function FloatingHeader() {
 	const links = [
 		{
 			label: "About Me",
-			href: "#",
+			href: "/",
 		},
 		{
 			label: "Projects",
-			href: "#",
+			href: "/#projects",
 		},
 		{
 			label: "Certifications",
-			href: "#",
+			href: "/certifications",
 		},
 	];
 
@@ -29,18 +30,21 @@ export function FloatingHeader() {
 			className={cn(
 				"sticky top-5 z-50",
 				"mx-auto w-full max-w-3xl rounded-lg border border-white/10 shadow-lg shadow-black/30",
-				"bg-neutral-900/80 supports-[backdrop-filter]:bg-neutral-900/70 backdrop-blur-lg",
+				"bg-neutral-900/80 supports-backdrop-filter:bg-neutral-900/70 backdrop-blur-lg",
 				"text-neutral-100",
 			)}
 		>
 			<nav className="mx-auto flex items-center justify-between p-1.5">
-				<div className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 duration-100 hover:bg-white/10">
+				<Link 
+					href="/"
+					className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 duration-100 hover:bg-white/10"
+				>
 					<Grid2x2PlusIcon className="size-5 text-white" />
 					<p className="text-base font-bold text-white">JP</p>
-				</div>
+				</Link>
 				<div className="hidden items-center gap-1 lg:flex">
 					{links.map((link) => (
-						<a
+						<Link
 							key={link.label}
 							className={cn(
 								buttonVariants({ variant: "ghost", size: "sm" }),
@@ -49,7 +53,7 @@ export function FloatingHeader() {
 							href={link.href}
 						>
 							{link.label}
-						</a>
+						</Link>
 					))}
 				</div>
 				<div className="flex items-center gap-2">
@@ -69,14 +73,19 @@ export function FloatingHeader() {
 							<MenuIcon className="size-4" />
 						</Button>
 						<SheetContent
-							className="bg-neutral-900/95 supports-[backdrop-filter]:bg-neutral-900/85 gap-0 backdrop-blur-lg border-white/10 text-neutral-100"
+							className="bg-neutral-900/95 supports-backdrop-filter:bg-neutral-900/85 gap-0 backdrop-blur-lg border-white/10 text-neutral-100"
 							showClose={false}
 							side="left"
 						>
+							<SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+							<SheetDescription className="sr-only">
+								Main site navigation links
+							</SheetDescription>
 							<div className="grid gap-y-2 overflow-y-auto px-4 pt-12 pb-5">
 								{links.map((link) => (
-									<a
+									<Link
 										key={link.label}
+										onClick={() => setOpen(false)}
 										className={cn(
 											buttonVariants({
 												variant: "ghost",
@@ -87,7 +96,7 @@ export function FloatingHeader() {
 										href={link.href}
 									>
 										{link.label}
-									</a>
+									</Link>
 								))}
 							</div>
 						</SheetContent>

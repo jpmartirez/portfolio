@@ -1,0 +1,85 @@
+import { Certification } from "@/types/certification";
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    id: "isite-ai-hackathon",
+    title: "Certificate of Participation – iSITE AI Hackathon",
+    issuer: "HEXCOREPH Labs & iSITE",
+    date: "April 30, 2026",
+    description:
+      "Awarded in recognition of active participation in the iSITE AI Hackathon, demonstrating exceptional innovation, technical expertise, and collaborative problem-solving in developing AI-driven solutions to real-world challenges.",
+    fileType: "image",
+    filePath: "/certifications/AI_Hackathon.jpg",
+    thumbnailPath: "/certifications/AI_Hackathon.jpg",
+    category: "Hackathons",
+    locationOrEvent: "iSITE AI Hackathon",
+  },
+  {
+    id: "sikaptala-hackathon",
+    title: "Certificate of Participation – SiKAPTala 2026 Virtual Hackathon",
+    issuer: "De La Salle University - Dasmariñas (CICS Student Government)",
+    date: "May 31, 2026",
+    description:
+      "Recognized as a participant with team Debuggerinas (Manuel S. Enverga University Foundation) during the nationwide CS & IT competition tackling computational problem solving, algorithms, and applied software design.",
+    fileType: "pdf",
+    filePath: "/certifications/SikapTala.pdf",
+    thumbnailPath: "/certifications/SikapTala_thumb.png",
+    category: "Hackathons",
+    credentialId: "6a1b0d8461c1d0758e10540d",
+    locationOrEvent: "SiKAPTala 2026",
+  },
+  {
+    id: "openit-codefest",
+    title: "Certificate of Participation – Open iT Codefest 2025",
+    issuer: "OpeniT Philippines, Inc.",
+    date: "November 8–9, 2025",
+    description:
+      "Participated in the Open iT Codefest with the theme 'Next Level Code: Refining Good into Great', contributing enthusiasm, creativity, and collaborative code development embodying innovation and engineering excellence.",
+    fileType: "image",
+    filePath: "/certifications/OpeniT_Certi.jpg",
+    thumbnailPath: "/certifications/OpeniT_Certi.jpg",
+    category: "Competitions",
+    locationOrEvent: "Lucena City, Philippines",
+  },
+  {
+    id: "national-programming-challenge-codechum",
+    title: "Certificate of Participation – National Programming Challenge 2025",
+    issuer: "CodeChum",
+    date: "December 3, 2025",
+    description:
+      "Demonstrated competitive algorithmic problem solving and programming skills throughout Group Stage 4 of the nationwide National Programming Challenge 2025 (Season 2).",
+    fileType: "pdf",
+    filePath: "/certifications/CodeChum.pdf",
+    thumbnailPath: "/certifications/CodeChum_thumb.png",
+    category: "Competitions",
+    credentialId: "mseuf.codechum.com/certificates/19916",
+    locationOrEvent: "Group Stage 4",
+  },
+  {
+    id: "udemy-fullstack-bootcamp",
+    title: "The Complete Full-Stack Web Development Bootcamp",
+    issuer: "Udemy (Dr. Angela Yu)",
+    date: "July 15, 2025",
+    description:
+      "Completed 61.5 total hours of comprehensive engineering coursework encompassing modern frontend architectures, backend APIs, relational and NoSQL databases, authentication, and full-stack software development.",
+    fileType: "pdf",
+    filePath: "/certifications/Full Stack Web Development Udemy.pdf",
+    thumbnailPath: "/certifications/Full Stack Web Development Udemy_thumb.png",
+    category: "Courses & Summits",
+    credentialId: "UC-520f650f-ee0e-4563-b3b4-78922222dce8",
+    locationOrEvent: "61.5 Total Hours",
+  },
+  {
+    id: "tech-nexus-summit",
+    title: "Certificate of Recognition – Tech Nexus 2024: Empowering Campus Innovators",
+    issuer: "Campus DEVCON",
+    date: "December 7, 2024",
+    description:
+      "Recognized for active attendance and technical engagement at the Campus DEVCON Summit, focusing on cutting-edge software paradigms, developer empowerment, and emerging technologies.",
+    fileType: "pdf",
+    filePath: "/certifications/Tech Nexus Certificate of Recognition.pdf",
+    thumbnailPath: "/certifications/Tech Nexus Certificate of Recognition_thumb.png",
+    category: "Courses & Summits",
+    locationOrEvent: "University of Batangas - Lipa Campus",
+  },
+];
