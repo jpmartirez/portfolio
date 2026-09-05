@@ -15,5 +15,6 @@ export interface Certification {
   thumbnailPath: string;
   category: "Hackathons" | "Competitions" | "Courses & Summits";
   credentialId?: string;
+  verifyUrl?: string;
   locationOrEvent?: string;
 }

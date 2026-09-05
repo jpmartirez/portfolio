@@ -80,7 +80,7 @@ export function CertificateCard({ certification, onSelect }: CertificateCardProp
         <div className="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-neutral-400">
           <span>{certification.locationOrEvent || "Verified Credential"}</span>
           <span className="text-cyan-400 group-hover:translate-x-0.5 transition-transform duration-200 font-medium">
-            View &rarr;
+            View
           </span>
         </div>
       </div>
