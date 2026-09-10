@@ -62,10 +62,18 @@ export function FloatingHeader() {
 				</div>
 				<div className="flex items-center gap-2">
 					<Button
+						asChild
 						size="sm"
-						className="bg-white text-neutral-900 hover:bg-neutral-200 font-semibold cursor-pointer "
+						className="bg-white text-neutral-900 hover:bg-neutral-200 font-semibold cursor-pointer"
 					>
-						Download CV
+						<a
+							href="/John%20Paul%20Martirez%20-%20CV.pdf"
+							download="John Paul Martirez - CV.pdf"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Download CV
+						</a>
 					</Button>
 					<Sheet open={open} onOpenChange={setOpen}>
 						<Button
@@ -102,6 +110,23 @@ export function FloatingHeader() {
 										{link.label}
 									</Link>
 								))}
+								<div className="pt-3 mt-2 border-t border-white/10">
+									<Button
+										asChild
+										size="sm"
+										className="w-full bg-white text-neutral-900 hover:bg-neutral-200 font-semibold cursor-pointer"
+									>
+										<a
+											href="/John%20Paul%20Martirez%20-%20CV.pdf"
+											download="John Paul Martirez - CV.pdf"
+											target="_blank"
+											rel="noopener noreferrer"
+											onClick={() => setOpen(false)}
+										>
+											Download CV
+										</a>
+									</Button>
+								</div>
 							</div>
 						</SheetContent>
 					</Sheet>
