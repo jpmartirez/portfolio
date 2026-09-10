@@ -22,7 +22,7 @@ export function FloatingHeader() {
 		},
 		{
 			label: "Projects",
-			href: "/#projects",
+			href: "/projects",
 		},
 		{
 			label: "Certifications",
