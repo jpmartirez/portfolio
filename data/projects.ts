@@ -86,8 +86,9 @@ export const PROJECTS: Project[] = [
 		title: "BiteTrack",
 		subtitle: "Rabies Surveillance & Animal Bite Case Management System",
 		description:
-			"A comprehensive healthcare surveillance web application for recording patient rabies cases, tracking animal bite incidents, monitoring vaccination schedule compliance, and generating automated monthly health department reports.",
+			"A healthcare surveillance web application engineered and built for a friend's thesis project. As the full-stack developer, I implemented the system to streamline recording patient rabies cases, tracking animal bite incidents, monitoring vaccination compliance schedules, and automating monthly health department reports.",
 		highlights: [
+			"Developed as the primary full-stack engineer implementing a peer's thesis research concept",
 			"End-to-end patient demographic, bite circumstance, and biting animal status registry",
 			"Interactive case database table with real-time patient filtering and dynamic status tracking",
 			"Multi-dose vaccination schedule management with compliance remark calculations",
