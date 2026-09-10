@@ -56,8 +56,8 @@ export function ProjectsGrid() {
         </div>
       </div>
 
-      {/* Grid of Projects */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Single Column List of Projects */}
+      <div className="flex flex-col gap-6 w-full">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
