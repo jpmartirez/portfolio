@@ -2,8 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { Grid2x2PlusIcon, MenuIcon } from "lucide-react";
-import { Sheet, SheetContent, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import { MenuIcon } from "lucide-react";
+import {
+	Sheet,
+	SheetContent,
+	SheetTitle,
+	SheetDescription,
+} from "@/components/ui/sheet";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -35,11 +40,10 @@ export function FloatingHeader() {
 			)}
 		>
 			<nav className="mx-auto flex items-center justify-between p-1.5">
-				<Link 
+				<Link
 					href="/"
 					className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 duration-100 hover:bg-white/10"
 				>
-					<Grid2x2PlusIcon className="size-5 text-white" />
 					<p className="text-base font-bold text-white">JP</p>
 				</Link>
 				<div className="hidden items-center gap-1 lg:flex">

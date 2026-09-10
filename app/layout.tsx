@@ -11,9 +11,16 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "John Paul Martirez | Aspiring AI Engineer",
+  title: "John Paul Martirez",
   description:
     "Portfolio of John Paul Martirez - Aspiring AI Engineer interested in AI, Machine Learning, and modern Software Solutions.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
