@@ -110,23 +110,6 @@ export function FloatingHeader() {
 										{link.label}
 									</Link>
 								))}
-								<div className="pt-3 mt-2 border-t border-white/10">
-									<Button
-										asChild
-										size="sm"
-										className="w-full bg-white text-neutral-900 hover:bg-neutral-200 font-semibold cursor-pointer"
-									>
-										<a
-											href="/John%20Paul%20Martirez%20-%20CV.pdf"
-											download="John Paul Martirez - CV.pdf"
-											target="_blank"
-											rel="noopener noreferrer"
-											onClick={() => setOpen(false)}
-										>
-											Download CV/Resume
-										</a>
-									</Button>
-								</div>
 							</div>
 						</SheetContent>
 					</Sheet>
