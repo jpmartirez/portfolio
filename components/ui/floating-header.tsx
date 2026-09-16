@@ -72,7 +72,7 @@ export function FloatingHeader() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							Download CV
+							Download CV/Resume
 						</a>
 					</Button>
 					<Sheet open={open} onOpenChange={setOpen}>
