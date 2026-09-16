@@ -123,7 +123,7 @@ export function FloatingHeader() {
 											rel="noopener noreferrer"
 											onClick={() => setOpen(false)}
 										>
-											Download CV
+											Download CV/Resume
 										</a>
 									</Button>
 								</div>
