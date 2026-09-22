@@ -8,16 +8,12 @@ export const INITIAL_CHAT_MESSAGE: ChatMessage = {
 };
 
 export const CHAT_SUGGESTIONS = [
-  "What are your main technical skills?",
+  "Who is John Paul Martirez",
   "Tell me about your AI projects",
   "What are your Certifications?",
   "How can I contact John Paul?",
 ];
 
-/**
- * Calls the backend API route (`/api/chat`) which securely communicates
- * with your Azure AI Foundry agent (`jp-agent-9212026`).
- */
 export async function sendChatMessage(text: string): Promise<string> {
   const response = await fetch("/api/chat", {
     method: "POST",
