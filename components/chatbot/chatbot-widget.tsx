@@ -45,11 +45,15 @@ export function ChatbotWidget() {
         }),
       };
       setMessages((prev) => [...prev, botMessage]);
-    } catch {
+    } catch (err: unknown) {
+      const errorText =
+        err instanceof Error
+          ? err.message
+          : "Sorry, I encountered an issue processing your request. Please try again.";
       const errorMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         sender: "assistant",
-        text: "Sorry, I encountered an issue processing your request. Please try again.",
+        text: errorText,
         timestamp: new Date().toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",
