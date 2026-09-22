@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import { BeamsBackground } from "@/components/ui/beams-background";
 import { FloatingHeader } from "@/components/ui/floating-header";
+import { ChatbotWidget } from "@/components/chatbot/chatbot-widget";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -40,6 +41,7 @@ export default function RootLayout({
             <FloatingHeader />
           </div>
           {children}
+          <ChatbotWidget />
         </div>
       </body>
     </html>
