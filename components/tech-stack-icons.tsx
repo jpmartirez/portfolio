@@ -190,7 +190,6 @@ export function TechStackIcons() {
 			<div className="min-h-5.5 px-1 flex items-center justify-between text-xs text-neutral-400">
 				{hoveredTech ? (
 					<div className="flex items-center gap-1.5 text-cyan-300">
-						<span className="size-1.5 rounded-full bg-cyan-400 animate-ping inline-block" />
 						<span className="font-medium text-white">{hoveredTech.name}:</span>
 						<span className="text-neutral-300">{hoveredTech.description}</span>
 					</div>
