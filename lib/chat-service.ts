@@ -9,9 +9,9 @@ export const INITIAL_CHAT_MESSAGE: ChatMessage = {
 
 export const CHAT_SUGGESTIONS = [
   "Who is John Paul Martirez",
-  "Tell me about your AI projects",
-  "What are your Certifications?",
-  "How can I contact John Paul?",
+  "Tell me about some of the AI projects",
+  "Certifications and achievements",
+  "Contact Information",
 ];
 
 export async function sendChatMessage(text: string): Promise<string> {
