@@ -1,6 +1,6 @@
 # John Paul Martirez — Portfolio
 
-Personal portfolio website of John Paul Martirez, an Aspiring AI Engineer focused on Artificial Intelligence, Machine Learning, and software solutions.
+Personal portfolio website of John Paul Martirez, an Aspiring AI Engineer / Software Engineer focused on Artificial Intelligence, Machine Learning, and software solutions.
 
 ## Overview
 
