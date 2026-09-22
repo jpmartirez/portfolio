@@ -100,6 +100,18 @@ const TECH_STACK: TechItem[] = [
 			</svg>
 		),
 	},
+	{
+		name: "Microsoft Azure",
+		category: "Tools",
+		level: "Used",
+		description:
+			"Cloud computing services, AI model deployment & scalable infrastructure",
+		icon: (
+			<svg className="size-5" viewBox="0 0 24 24" fill="currentColor">
+				<path d="M5.485 20.25H.5a.498.498 0 0 1-.453-.715L7.26 3.65a.5.5 0 0 1 .453-.285h5.454a.499.499 0 0 1 .425.76L5.485 20.25zm4.84-7.464 2.879-5.184a.499.499 0 0 1 .436-.257h6.764a.5.5 0 0 1 .438.742l-5.698 12.164a.5.5 0 0 1-.452.288H8.81l1.515-7.753z" />
+			</svg>
+		),
+	},
 ];
 
 export function TechStackIcons() {
