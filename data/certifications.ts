@@ -131,4 +131,18 @@ export const CERTIFICATIONS: Certification[] = [
 		category: "Courses & Summits",
 		locationOrEvent: "SAP Analytics Cloud Training Session",
 	},
+	{
+		id: "datacamp-working-with-openai-api",
+		title: "Working with the OpenAI API",
+		issuer: "DataCamp",
+		date: "September 27, 2026",
+		description:
+			"Completed hands-on coursework covering programmatic integration with OpenAI models, including text generation, chat completions, prompt engineering, content moderation, and audio transcription using the OpenAI API.",
+		fileType: "image",
+		filePath: "/certifications/OpenAI_Certi.png",
+		thumbnailPath: "/certifications/OpenAI_Certi.png",
+		category: "Courses & Summits",
+		credentialId: "45,630,058",
+		locationOrEvent: "3 Total Hours",
+	},
 ];
