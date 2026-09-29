@@ -138,11 +138,25 @@ export const CERTIFICATIONS: Certification[] = [
 		date: "September 27, 2026",
 		description:
 			"Completed hands-on coursework covering programmatic integration with OpenAI models, including text generation, chat completions, prompt engineering, content moderation, and audio transcription using the OpenAI API.",
-		fileType: "image",
-		filePath: "/certifications/OpenAI_Certi.png",
+		fileType: "pdf",
+		filePath: "/certifications/OpenAI_Certi.pdf",
 		thumbnailPath: "/certifications/OpenAI_Certi.png",
 		category: "Courses & Summits",
 		credentialId: "45,630,058",
 		locationOrEvent: "3 Total Hours",
+	},
+	{
+		id: "datacamp-prompt-engineering-with-the-openai-api",
+		title: "Prompt Engineering with the OpenAI API",
+		issuer: "DataCamp",
+		date: "September 29, 2026",
+		description:
+			"Completed hands-on coursework mastering prompt engineering principles and strategies with the OpenAI API, including few-shot prompting, contextual conditioning, chain-of-thought workflows, and optimizing model outputs for production applications.",
+		fileType: "pdf",
+		filePath: "/certifications/Prompt Engineering with the OpenAI API.pdf",
+		thumbnailPath: "/certifications/Prompt Engineering with the OpenAI API_thumb.png",
+		category: "Courses & Summits",
+		credentialId: "50,113,123",
+		locationOrEvent: "4 Total Hours",
 	},
 ];
