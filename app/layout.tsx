@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import { BeamsBackground } from "@/components/ui/beams-background";
 import { FloatingHeader } from "@/components/ui/floating-header";
 import { ChatbotWidget } from "@/components/chatbot/chatbot-widget";
 import "./globals.css";
@@ -34,8 +33,12 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} dark h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <BeamsBackground className="fixed inset-0 -z-10" />
+      <body className="min-h-full flex flex-col bg-black text-foreground relative">
+        {/* Full-site black asphalt texture background */}
+        <div
+          aria-hidden="true"
+          className="fixed inset-0 -z-10 bg-black bg-[url('/asfalt-light.png')] bg-repeat pointer-events-none"
+        />
         <div className="relative z-10 min-h-screen flex flex-col">
           <div className="px-4 pt-5">
             <FloatingHeader />

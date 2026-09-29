@@ -117,7 +117,7 @@ export function HeroProfile() {
 					{/* Left Column: Round Profile Picture */}
 					<div className="shrink-0 flex flex-col items-center">
 						<div className="relative group">
-							{/* Outer decorative gradient ring matching BeamsBackground cyan/sky hues */}
+							{/* Outer decorative subtle accent ring */}
 							<div className="absolute -inset-1 rounded-full bg-linear-to-tr from-cyan-500/40 via-sky-400/20 to-teal-500/40 blur-sm group-hover:blur-md transition-all duration-300 opacity-75 group-hover:opacity-100" />
 
 							{/* Picture Container */}
