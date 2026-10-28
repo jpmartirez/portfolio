@@ -1,52 +1,47 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import { FloatingHeader } from "@/components/ui/floating-header";
-import { ChatbotWidget } from "@/components/chatbot/chatbot-widget";
 import "./globals.css";
 
 const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	variable: "--font-outfit",
+	subsets: ["latin"],
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "John Paul Martirez",
-  description:
-    "Portfolio of John Paul Martirez - Aspiring AI Engineer interested in AI, Machine Learning, and modern Software Solutions.",
-  icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    apple: "/apple-icon.png",
-  },
+	title: "John Paul Martirez",
+	description:
+		"Portfolio of John Paul Martirez - Aspiring AI Engineer interested in AI, Machine Learning, and modern Software Solutions.",
+	icons: {
+		icon: [
+			{ url: "/icon.svg", type: "image/svg+xml" },
+			{ url: "/favicon.ico", sizes: "any" },
+		],
+		apple: "/apple-icon.png",
+	},
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${outfit.variable} dark h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-black text-foreground relative">
-        {/* Full-site black asphalt texture background */}
-        <div
-          aria-hidden="true"
-          className="fixed inset-0 -z-10 bg-black bg-[url('/asfalt-light.png')] bg-repeat pointer-events-none"
-        />
-        <div className="relative z-10 min-h-screen flex flex-col">
-          <div className="px-4 pt-5">
-            <FloatingHeader />
-          </div>
-          {children}
-          <ChatbotWidget />
-        </div>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" className={`${outfit.variable} dark h-full antialiased`}>
+			<body className="min-h-full flex flex-col bg-black text-foreground relative">
+				{/* Full-site black asphalt texture background */}
+				<div
+					aria-hidden="true"
+					className="fixed inset-0 -z-10 bg-black bg-[url('/asfalt-light.png')] bg-repeat pointer-events-none"
+				/>
+				<div className="relative z-10 min-h-screen flex flex-col">
+					<div className="px-4 pt-5">
+						<FloatingHeader />
+					</div>
+					{children}
+				</div>
+			</body>
+		</html>
+	);
 }
