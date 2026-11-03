@@ -2,6 +2,37 @@ import { Project } from "@/types/project";
 
 export const PROJECTS: Project[] = [
 	{
+		id: "image-forensics",
+		title: "Dual-Branch Digital Image Forensics and Synthesis Detection System",
+		subtitle:
+			"Undergraduate Thesis Project · Multi-Modal Forgery Detection & Forensic Reporting",
+		description:
+			"Developed as our undergraduate thesis project, this integrated forensic image authentication platform is engineered for multi-modal forgery detection, tamper localization, and automated forensic report generation. Implements a dual-branch neural architecture with a multi-gate evaluation matrix to detect and evaluate authenticity across three canonical classifications: Authentic, Spliced, and AI-Generated / Deepfake.",
+		highlights: [
+			"Researched and engineered as our undergraduate thesis project, delivering an end-to-end forensic authentication system with courtroom-ready PDF certification",
+			"Dual-branch forensic engine coupling spatial, FFT frequency, DWT wavelet, and OpenCV YuNet facial analysis with TruFor pixel-level tampering localization",
+			"Dense anomaly segmentation decoder utilizing Noiseprint++ sensor noise residuals and MiT-B2 hierarchical vision transformer backbone",
+			"Multi-gate decision matrix fusing global synthesis confidence with localized anomaly probabilities to render 40% opacity JET thermal heatmaps",
+			"Cross-platform client ecosystem featuring a Next.js 16/React 19 web app and secure Tauri v2 (Rust) desktop shell with dynamic @react-pdf/renderer report export",
+			"Asynchronous FastAPI backend with multi-threaded inference queues, JWT role-based access control (Admin & Investigator), and hosted Neon PostgreSQL audit persistence",
+		],
+		techStack: [
+			"PyTorch",
+			"TruFor",
+			"FastAPI",
+			"Python",
+			"Next.js 16",
+			"React 19",
+			"Tauri v2",
+			"TypeScript",
+			"PostgreSQL",
+			"OpenCV",
+			"Tailwind CSS",
+		],
+		category: "AI & Machine Learning",
+		badge: "Undergraduate Thesis",
+	},
+	{
 		id: "ephnyr-ai",
 		title: "Ephnyr AI",
 		subtitle: "Full-Stack Multi-Tenant RAG Platform with Groq LPU & pgvector",
