@@ -31,6 +31,7 @@ export const PROJECTS: Project[] = [
 		],
 		category: "AI & Machine Learning",
 		badge: "Undergraduate Thesis",
+		githubUrl: "https://github.com/jpmartirez/kilatis",
 	},
 	{
 		id: "ephnyr-ai",
