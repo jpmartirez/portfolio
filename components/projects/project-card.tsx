@@ -1,5 +1,6 @@
 import React from "react";
-import { Radio } from "lucide-react";
+import Image from "next/image";
+import { Radio, ExternalLink } from "lucide-react";
 import { Project } from "@/types/project";
 
 function GithubIcon({ className = "size-3.5" }: { className?: string }) {
@@ -21,6 +22,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const hasDeploy = Boolean(project.deployUrl && project.deployUrl.trim() !== "");
   const hasGithub = Boolean(project.githubUrl && project.githubUrl.trim() !== "");
+  const hasImage = Boolean(project.image && project.image.trim() !== "");
   const hasAnyLink = hasDeploy || hasGithub;
 
   return (
@@ -92,6 +94,70 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
         )}
       </div>
+
+      {/* Overview Screenshot Preview (Only rendered when project.image is provided) */}
+      {hasImage && (
+        <div className="relative z-10 w-full overflow-hidden rounded-xl border border-white/10 bg-neutral-950/70 shadow-2xl group/preview">
+          {/* Browser mockup header bar */}
+          <div className="flex items-center justify-between px-3.5 py-2 border-b border-white/10 bg-neutral-900/80 backdrop-blur-md">
+            <div className="flex items-center gap-1.5">
+              <span className="size-2.5 rounded-full bg-rose-500/60" />
+              <span className="size-2.5 rounded-full bg-amber-500/60" />
+              <span className="size-2.5 rounded-full bg-emerald-500/60" />
+            </div>
+            <div className="flex items-center gap-1.5 text-[11px] font-mono text-neutral-400 max-w-[65%] truncate">
+              <span className="text-neutral-500">overview</span>
+              <span className="text-neutral-600">/</span>
+              <span className="text-neutral-300 truncate">
+                {project.deployUrl
+                  ? project.deployUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+                  : project.id}
+              </span>
+            </div>
+            <div className="w-16 text-right">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-cyan-400/80">
+                Preview
+              </span>
+            </div>
+          </div>
+
+          {/* Screenshot viewport */}
+          <div className="relative aspect-16/9 sm:aspect-21/9 w-full overflow-hidden bg-neutral-950">
+            <Image
+              src={project.image!}
+              alt={`${project.title} homepage screenshot`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+              className="object-cover object-top transition-transform duration-500 group-hover/preview:scale-[1.015]"
+            />
+
+            {/* Subtle interactive hover overlay */}
+            <div className="absolute inset-0 bg-neutral-950/50 opacity-0 group-hover/preview:opacity-100 transition-opacity duration-200 flex items-center justify-center p-4">
+              {hasDeploy ? (
+                <a
+                  href={project.deployUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-neutral-950 font-semibold text-xs shadow-xl transition-transform duration-200 hover:scale-105 cursor-pointer"
+                >
+                  <span>Open Live Project</span>
+                  <Radio className="size-3.5 text-neutral-950" />
+                </a>
+              ) : (
+                <a
+                  href={project.image!}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-900/90 border border-white/20 text-xs font-semibold text-white tracking-wide shadow-xl backdrop-blur-md hover:bg-neutral-800 transition-colors cursor-pointer"
+                >
+                  <span>View Full Screenshot</span>
+                  <ExternalLink className="size-3.5 text-cyan-400" />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Key Capabilities: 2-column grid maximizing the wide card space */}
       <div className="relative z-10 space-y-3 border-t border-white/5 pt-5">

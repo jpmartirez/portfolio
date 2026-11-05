@@ -15,4 +15,5 @@ export interface Project {
   badge?: string;
   deployUrl?: string;
   githubUrl?: string;
+  image?: string;
 }
